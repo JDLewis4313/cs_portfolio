@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Portfolio</title>
+
+  <style>
+    body {
+      background-color: yellow;
+      margin: 0;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- I use div tags so that I can create grid style layout and utilize flex box attributes with styling -->
+  <div id="about-me">
+    <h1>About Me</h1>
+    <p>My name is Jermarcus Lewis and this is my class portfolio for CS. 
+    This portfolio is the skeleton for my final project which will incorporate Flask.
+    I consider myself a Python FullStack Developer and I use Django Framework with dependencies such as Gunicorn, Whitenoise, Pillow,
+    and PostgreSQL.</p>
+  </div>
+
+  <div id="form">
+    <h3>What's your favorite programming language?</h3>
+    <form method="POST" action="#">
+      <label for="language">Language:</label>
+      <input type="text" id="language" name="language" placeholder="e.g., Python">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li>Blog with Flask and SQLite</li>
+      <li>Real-time chat with Flask-SocketIO</li>
+      <li>Interactive form with Flask-WTF</li>
+    </ul>
+  </div>
+
+  <!-- this will become a chatroom using Flask SocketIO -->
+  <footer>
+    <p>&copy; 2025 Jermarcus Lewis</p>
+  </footer>
+</body>
+</html>
