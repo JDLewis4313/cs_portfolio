@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/css/main.css">
+  <script src="../../static/js/main.js"></script>
+
+<script>
+  function updateWelcome() {
+    document.getElementById("welcome-message").innerHTML = "What I’m Learning, Building, and Breaking (on Purpose)";
+  }
+</script>
+
+</head>
+</head>
+
+<body>
+<header>
+  <h1>Jermarcus Lewis Portfolio</h1>
+  <p id="welcome-message">Behind the Code: Stories from My Build Process</p>
+  <button onclick="updateWelcome()">Click Here</button>
+</header>
+
+<nav id="nav">
+  <a href="../core/index.html">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="../chat/chat.html">Chat</a>
+  <a href="../core/signup.html" style="float:right">Sign up</a>
+</nav>
+
+<div class="content">
+<div class="row">
+  <div class="leftcolumn">
+
+    <div class="card">
+      <h2 id="django">When Python Became Real: My Journey Through Django</h2>
+      <h5>Late May 2025</h5>
+      <img src="../../static/images/img_mountains.jpg" alt="Mountains representing learning curves" width="300" height="200">
+      <p>I didn’t learn Python by reading syntax — I learned it by building with Django.</p>
+      <p>Outside of class, I took on real projects with tools like Whitenoise and Pillow, 
+        and that hands-on experience forced me to understand data structures, views, models, and routing logic. 
+        Django’s modularity trained me to think in clean sections. It was in those first days that I stopped thinking like a student and started thinking like a developer.</p>
+    </div>
+
+    <div class="card">
+      <h2 id="flask">Flask First, Django Clearer: Learning Through Contrast</h2>
+      <h5>June 2025</h5>
+      <img src="../../static/images/img_lights.jpg" alt="Northern Lights symbolizing discovery" width="300" height="200">
+      <p>With the class shifting towards Flask, it felt like the training wheels came off.</p>
+      <p>Unlike Django, Flask doesn’t hand you a structure — you build it from scratch. 
+        And that forced me to re-create the MVT pattern, route my pages manually, and manage my own layout logic. 
+        Ironically, that’s what made Django click for me. By modeling Django’s behavior in Flask, I finally understood how web apps fit together. 
+        The freedom in Flask sharpened my discipline.</p>
+    </div>
+
+    <div class="card">
+      <h2 id="structure">Django Made My Frontend Smarter</h2>
+      <h5>Mid June 2025</h5>
+      <img src="../../static/images/img_forest.jpg" alt="Forest symbolizing code organization" width="300" height="200">
+      <p>I remember staring my Frontend project thinking, “this is messy.”</p>
+      <p>The image files, the HTML files, the CSS — everything felt cluttered. 
+        So I applied my Flask's folder design (inspired by Django) to pure Frontend development: 
+        I built <code>static/</code> and <code>templates/</code> folders just like I would in Flask or Django. 
+        That step made my HTML modular. I realized my static assets should be organized for scale. 
+        Even though I wasn’t yet using Jinja, I knew that structure would carry over when Flask arrived. 
+        I am no longer just designing — I am architecting.</p>
+    </div>
+
+    <div class="card">
+      <h2 id="css">How Java and Flask Pushed Me to Respect CSS</h2>
+      <h5>Early July 2025</h5>
+      <img src="../../static/images/img_lights.jpg" alt="Light emerging as clarity in code structure" width="300" height="200">
+      <p>I used to use internal CSS out of comfort — I liked seeing everything together.</p>
+      <p>But something shifted. I was deep into Flask (even though the class isn't yet), and starting Java, and I realized: 
+        separation of concern matters. I tested pulling styles into a <code>main.css</code> file and expected chaos… but nothing broke. 
+        And that was liberating. I saw how each page could reference its own stylesheet, 
+        just like methods in Java can live inside different packages.</p>
+    </div>
+
+    <div class="card">
+      <h2 id="java">Crossing Over: How Java Helped Me Embrace Ultra Modularity</h2>
+      <h5>Mid July 2025</h5>
+      <img src="../../static/images/img_forest.jpg" alt="Forest representing structure and separation" width="300" height="200">
+      <p>Java isn’t just another language — it helped me embrace modular thinking on another level.</p>
+      <p>As I learned about classes, packages, and calling methods from other files, 
+        I started recognizing that structure in Python modules, my Flask layouts and even my frontend files. 
+        My understanding of routing, templates, CSS separation — all of it snapped together. 
+        Django gave me perspective and tools, Flask gave me the freedom to build, and Java gave me the push to stop clinging to clutter. 
+        Now everything has its place. And I’m building bigger because of it.</p>
+    </div>
+
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Popular Posts</h3>
+
+      <div class="gallery">
+        <a target="_blank" href="#django">
+          <img src="../../static/images/img_mountains.jpg" alt="Django learning path" width="300" height="200">
+        </a>
+        <div class="desc">My hands-on journey with Django</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="#flask">
+          <img src="../../static/images/img_lights.jpg" alt="Flask discovery" width="300" height="200">
+        </a>
+        <div class="desc">How Flask helped me understand Django</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="#java">
+          <img src="../../static/images/img_forest.jpg" alt="Java modular thinking" width="300" height="200">
+        </a>
+        <div class="desc">Embracing structure with Java</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>
+  <iframe src="https://ghbtns.com/github-btn.html?user=JDLewis4313&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub Follow Button"></iframe>
+  <a href="https://www.linkedin.com/in/jermarcus-lewis-6555b0191/" target="_blank">
+    <img src="../../static/icons/linkedin.png" alt="Follow me on LinkedIn" width="25" height="25">
+  </a>
+  <p>Connect with me through GitHub or LinkedIn to follow my developer journey.</p>
+  <p>&copy; 2025 Jermarcus Lewis</p>
+</footer>
+</body>
+</html>

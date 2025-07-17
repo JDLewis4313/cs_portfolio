@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Toolkit</title>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    .toolkit-section {
+      border: 2px solid #999;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .shape-box {
+      width: 150px;
+      height: 150px;
+      background-color: lightblue;
+      margin-top: 10px;
+      padding: 10px;
+      border: 5px solid navy;
+      border-radius: 0;
+      transition: all 0.3s ease;
+    }
+
+    .rounded {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧰 Jermarcus' Interactive Toolkit</h1>
+
+  <!-- Section 1: Box Model -->
+  <div class="toolkit-section" id="box-model">
+    <h2>Box Model Demo</h2>
+    <button onclick="toggleShape()">Toggle Shape</button>
+    <div class="shape-box" id="shapeBox">This is a box</div>
+  </div>
+
+  <!-- Section 2: Create Element -->
+  <div class="toolkit-section" id="create-element">
+    <h2>DOM Manipulation</h2>
+    <button onclick="createParagraph()">Add a Paragraph</button>
+    <div id="paragraphContainer"></div>
+  </div>
+
+  <!-- Section 3: Event Listener -->
+  <div class="toolkit-section" id="event-listener">
+    <h2>Event Listener</h2>
+    <input type="text" id="colorInput" placeholder="Type a color (e.g., red)">
+    <button id="applyColorBtn">Apply Color</button>
+    <div class="shape-box" id="colorTarget">Watch me change</div>
+  </div>
+
+<script>
+  // Toggle rounded/square shape
+  function toggleShape() {
+    const box = document.getElementById("shapeBox");
+    box.classList.toggle("rounded");
+  }
+
+  // Create a new paragraph with DOM
+  function createParagraph() {
+    const p = document.createElement("p");
+    p.textContent = "You just created a paragraph using JavaScript!";
+    document.getElementById("paragraphContainer").appendChild(p);
+  }
+
+  // Event listener: change box color
+  document.getElementById("applyColorBtn").addEventListener("click", function(e) {
+    const color = document.getElementById("colorInput").value;
+    document.getElementById("colorTarget").style.backgroundColor = color;
+  });
+</script>
+
+</body>
+</html>
