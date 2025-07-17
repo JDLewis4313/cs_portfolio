@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Commons - Chat</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body>
+<header>
+  <h1>The Commons</h1>
+  <p>Real-time Chat Community</p>
+</header>
+<nav id="nav">
+  <a href="index.html">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="chat.html">Chat</a>
+  <a href="signup.html" style="float:right">Sign up</a>
+</nav>
+<div class="content">
+	<div class="card">
+	  <h3>Welcome to The Commons</h3>
+	  <p>This real-time chat room will use Flask-SocketIO for live conversations. Connect with other visitors and share your thoughts!</p>
+	  <p><strong>Coming Soon:</strong> Live messaging, user presence indicators, and chat history.</p>
+	</div>
+</div>
+
+<div id="chat-bubble">
+  <button onclick="toggleChat()">💬</button>
+  <div id="chat-window" style="display:none;">
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Ask me something...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<footer>
+    <iframe src="https://ghbtns.com/github-btn.html?user=JDLewis4313&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub Follow Button"></iframe>
+    <a href="https://www.linkedin.com/in/jermarcus-lewis-6555b0191/" target="_blank">
+      <img src="linkedin.png" alt="Follow me on LinkedIn" width="25" height="25">
+    </a>
+    <p>Connect with me through GitHub or LinkedIn to follow my developer journey.</p>
+ 
+  <p>&copy; 2025 Jermarcus Lewis</p>
+</footer>
+</body>
+</html>

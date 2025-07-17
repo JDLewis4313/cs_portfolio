@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+<script>
+  function updateWelcome() {
+    document.getElementById("welcome-message").innerHTML = "Excited to share my journey with Flask, Django, and Java!";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const input = document.getElementById("language");
+
+    const response = document.createElement("p");
+    response.id = "lang-response";
+    response.style.marginTop = "10px";
+    form.appendChild(response);
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const value = input.value.trim().toLowerCase();
+
+      if (value === "python") {
+        response.textContent = `${input.value} is one of my favorites — flexible, clean, and powerful.`;
+      } else if (value === "java") {
+        response.textContent = `${input.value}? I like the modular concepts it teaches — it's helped me grow architecturally.`;
+      } else if (value === "html" || value === "css" || value === "javascript") {
+        response.textContent = `${input.value} is part of the trio of HTML, CSS, and JavaScript — essential for designing elegant frontends that sync with backend logic.`;
+      } else {
+        response.textContent = `"${input.value}" is interesting! I'd love to learn what you're building with it.`;
+      }
+    });
+  });
+</script>
+
+</head>
+
+<body>
+<header>
+  <h1>Jermarcus Lewis Portfolio</h1>
+  <p id="welcome-message">Welcome to my Class Portfolio</p>
+  <button onclick="updateWelcome()">Update Welcome Message</button>
+</header>
+
+<nav id="nav">
+  <a href="index.html">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="chat.html">Chat</a>
+  <a href="signup.html" style="float:right">Sign up</a>
+</nav>
+
+<div class="content">
+
+  <div class="card">
+    <h2>About Me</h2>
+    <img src="me_iggy.jpg" alt="Portrait of Me and Iggy" style="float:left;width:100px;height:100px;border-radius:8px;margin-right:15px;">
+    <p>My name is Jermarcus Lewis and this is my class portfolio for CS. 
+    I’m currently working on a Flask final project and sharpening my skills in full stack development using Python, HTML, CSS, and JavaScript. I’ve also worked with Django Framework tools such as Gunicorn, Pillow, and Whitenoise — and I’m integrating Flask-SocketIO to build a real-time chatbot.</p>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="column">
+        <h3>Languages & Tech</h3>
+        <ul>
+          <li>Python</li>
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>Flask & Django</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h3>Tools & Libraries</h3>
+        <ul>
+          <li>Flask-SocketIO</li>
+          <li>Whitenoise</li>
+          <li>Pillow</li>
+          <li>Gunicorn</li>
+          <li>Visual Studio Code</li>
+          <li>Notion (planning)</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h3>Project Focus</h3>
+        <ul>
+          <li>Build chatbot using Flask</li>
+          <li>Create newsletter signup system</li>
+          <li>Deploy with Gunicorn</li>
+          <li>Style with HTML/CSS</li>
+          <li>Modular app structure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+	<div class="card">
+	  <h2>My Projects</h2>
+	  <ul>
+	    <li>Blog with Flask and SQLite</li>
+	    <li>Real-time chat with Flask-SocketIO</li>
+	    <li>Interactive form with Flask-WTF</li>
+	  </ul>
+	</div>
+
+	<div class="card">
+	  <h3>What's your favorite programming language?</h3>
+	  <form method="POST" action="#">
+	    <label for="language">Language:</label>
+	    <input type="text" id="language" name="language" placeholder="e.g., Python">
+	    <button type="submit">Submit</button>
+	  </form>
+	</div>
+  <div class="card">
+    
+<div id="chat-bubble">
+  <button onclick="toggleChat()">💬</button>
+  <div id="chat-window" style="display:none;">
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Ask me something...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<footer>
+    <iframe src="https://ghbtns.com/github-btn.html?user=JDLewis4313&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub Follow Button"></iframe>
+    <a href="https://www.linkedin.com/in/jermarcus-lewis-6555b0191/" target="_blank">
+      <img src="linkedin.png" alt="Follow me on LinkedIn" width="25" height="25">
+    </a>
+    <p>Connect with me through GitHub or LinkedIn to follow my developer journey.</p>
+ 
+  <p>&copy; 2025 Jermarcus Lewis</p>
+</footer>
+
+</body>
+</html>
